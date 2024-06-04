@@ -1,5 +1,5 @@
 view: fact_maintenances {
-  sql_table_name: public.FactMaintenances ;;
+  sql_table_name: "public"."FactMaintenances" ;;
 
   dimension: component_key {
     type: string
@@ -10,6 +10,7 @@ view: fact_maintenances {
     sql: ${TABLE}."dateKey" ;;
   }
   dimension: maintenance_cost {
+    hidden: yes
     type: number
     sql: ${TABLE}."maintenanceCost" ;;
   }
@@ -18,6 +19,7 @@ view: fact_maintenances {
     sql: ${TABLE}."maintenanceDescription" ;;
   }
   dimension: maintenance_duration {
+    hidden: yes
     type: number
     sql: ${TABLE}."maintenanceDuration" ;;
   }
@@ -40,5 +42,13 @@ view: fact_maintenances {
   }
   measure: count {
     type: count
+  }
+  measure: total_maintenance_cost {
+    type: sum
+    sql: ${maintenance_cost} ;;
+  }
+  measure: total_maintenance_duration {
+    type: sum
+    sql: ${maintenance_duration} ;;
   }
 }

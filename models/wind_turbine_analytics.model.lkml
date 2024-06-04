@@ -51,6 +51,8 @@ explore: fact_maintenances {
     sql_on: ${fact_maintenances.time_key}=${dim_times.time_key} ;;
     relationship: many_to_one
   }
+
+
 }
 
 explore: fact_turbine_performances {}

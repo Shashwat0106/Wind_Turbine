@@ -1,5 +1,5 @@
 view: dim_dates {
-  sql_table_name: public.DimDates ;;
+  sql_table_name: "public"."DimDates" ;;
 
   dimension_group: date {
     type: time

@@ -1,5 +1,5 @@
 view: dim_locations {
-  sql_table_name: public.DimLocations ;;
+  sql_table_name: "public"."DimLocations" ;;
 
   dimension: elevation {
     type: number
@@ -22,6 +22,11 @@ view: dim_locations {
     type: number
     sql: ${TABLE}."longitude" ;;
   }
+  #dimension: location {
+   # type: location
+   # sql_latitude: ${latitude} ;;
+   # sql_longitude: ${longitude} ;;
+  #}
   measure: count {
     type: count
   }

@@ -1,5 +1,5 @@
 view: dim_turbines {
-  sql_table_name: public.DimTurbines ;;
+  sql_table_name: "public"."DimTurbines" ;;
 
   dimension: capacity {
     type: number

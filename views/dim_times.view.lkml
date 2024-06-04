@@ -1,5 +1,5 @@
 view: dim_times {
-  sql_table_name: public.DimTimes ;;
+  sql_table_name: "public"."DimTimes" ;;
 
   dimension: hour {
     type: string

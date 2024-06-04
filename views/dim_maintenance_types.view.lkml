@@ -1,5 +1,5 @@
 view: dim_maintenance_types {
-  sql_table_name: public.DimMaintenanceTypes ;;
+  sql_table_name: "public"."DimMaintenanceTypes" ;;
 
   dimension: description {
     type: string

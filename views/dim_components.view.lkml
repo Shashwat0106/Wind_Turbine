@@ -1,5 +1,5 @@
 view: dim_components {
-  sql_table_name: public.DimComponents ;;
+  sql_table_name: "public"."DimComponents" ;;
 
   dimension: component_id {
     type: string
