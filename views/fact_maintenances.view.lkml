@@ -46,6 +46,7 @@ view: fact_maintenances {
   measure: total_maintenance_cost {
     type: sum
     sql: ${maintenance_cost} ;;
+    drill_fields: [dim_turbines.manufacturer,total_maintenance_cost]
   }
   measure: total_maintenance_duration {
     type: sum
